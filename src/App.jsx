@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     const fetchApiData = async () => {
       try {
-        const response = await fetch('http://localhost:3001/apiCall');
+        const response = await fetch('/apiCall');
         const result = await response.json();
         setData(result);
       } catch (error) {
