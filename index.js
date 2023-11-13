@@ -1,11 +1,18 @@
 import express from 'express';
 import cors from 'cors';
 import axios from 'axios'
+import ViteExpress from 'vite-express'
+
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
+// ViteExpress.config({ mode: "production" })
 const port = 3001; 
 
 app.use(cors());
+app.use(express.static(__dirname + '/dist'));
 
 app.get('/apiCall', async (req, res) => {
     try {
@@ -18,10 +25,8 @@ app.get('/apiCall', async (req, res) => {
     }
 });
 
-app.get('/', (req, res) => {
-    res.send("Currently in BACKEND");
+app.get('*', (req, res) => {
+    res.sendFile(__dirname, 'dist/index.html');
 });
 
-app.listen(port, () => {
-    console.log(`Express server running on http://localhost:${port}`);
-});
+ViteExpress.listen(app, port, ()=> console.log(`Vite Express server running on port: ${port}`))
