@@ -1,42 +1,46 @@
-#root {
-  max-width: 1280px;
+
+.container{
+  border: 3px solid #fff;
+  padding: 20px;
+  overflow:hidden;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container_div{
+  padding: 20px;
+  border: 2px solid red;
+  height: 100vh;
+  float: left;
+  width: 50%;
+  color: white;
+  overflow: scroll;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page_directory_div{
+  width: 50%;
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.job_card{
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+#current_button{
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.read-the-docs {
-  color: #888;
+#prev_button{
+  margin-left: 0%;
+}
+
+#next_button{
+  margin-right: 0%;
+}
+
+/* hide scrollbar of left div */
+#left_div::-webkit-scrollbar{ /*for webkit browsers*/
+  display:none;
+  -ms-overflow-style: none; /*for microsoft web browsers*/
+  scrollbar-width: none; /*for gecko based browswers*/
 }
