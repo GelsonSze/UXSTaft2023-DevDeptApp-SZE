@@ -13,7 +13,6 @@ app.get('/apiCall', async (req, res) => {
     try {
         var pageNumber = req.query.pageNumber;
         const apiData = await axios.get(`https://arbeitnow.com/api/job-board-api?page=${pageNumber}`);
-        console.log(apiData.data)
         res.json(apiData.data);
     } catch (e) {
         console.error('Error making API call:', e);
