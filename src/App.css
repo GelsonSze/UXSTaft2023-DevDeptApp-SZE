@@ -1,31 +1,48 @@
 
 .container{
-  border: 3px solid #fff;
-  padding: 20px;
+  padding: 8px;
   overflow:hidden;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 5% auto 5%;
 }
 
 .container_div{
   padding: 20px;
-  border: 2px solid red;
-  height: 100vh;
-  float: left;
-  width: 50%;
+  height: 87vh;
   color: white;
   overflow: scroll;
 }
 
 .page_directory_div{
-  width: 50%;
+  flex: 1;
   display: flex;
+  margin: 0px 0px 8px 8px;
 }
 
 .job_card{
   cursor: pointer;
+  box-shadow: 0 0 0 2px #3e4346;
+  border-radius: 16px;
+  padding: 16px;
+  word-wrap: break-word;
 }
 
-#current_button{
+.active{
+  box-shadow: 0 0 0 2px #646cff;
+}
+
+.flexbox_break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.flexbox_filler {
+  flex: 3;
+}
+
+
+#page_number{
   margin-left: auto;
   margin-right: auto;
 }
@@ -38,9 +55,19 @@
   margin-right: 0%;
 }
 
+#left_div{
+  flex: 1;
+}
+
 /* hide scrollbar of left div */
 #left_div::-webkit-scrollbar{ /*for webkit browsers*/
   display:none;
   -ms-overflow-style: none; /*for microsoft web browsers*/
   scrollbar-width: none; /*for gecko based browswers*/
+}
+
+#right_div{
+  flex:3;
+  padding: 16px;
+  margin-left: 2%;
 }

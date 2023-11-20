@@ -1,0 +1,22 @@
+#header_container{
+    margin-top: 16px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#header_title{
+    text-align: center;
+    font-size: x-large;
+    color: white;
+}
+
+#github_button{
+    position: absolute;
+    right: 5%;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
