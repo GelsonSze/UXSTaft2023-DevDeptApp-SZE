@@ -25,3 +25,5 @@ To install and run the project locally:
 When going to the [deployed website](https://uxstaft2023-devdeptapp-sze.onrender.com), since it is deployed with a free plan on [render.com](https://render.com), one of the limitations is that the server becomes inactive when not used for a while, so it may take a while to load when accessing the website. Accessing the website shortly after accessing it, however, shouldn't take as long.
 
 Another note is that since the API is for job offerings in EU, the languages seen in the application are mostly non-English, however, some are written in English.
+
+Lastly, the webapp isn't compatible in mobile, so going to the deployed website using a mobile phone may not display the application properly.
